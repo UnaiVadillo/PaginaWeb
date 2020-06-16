@@ -1,0 +1,126 @@
+@font-face{
+	font-family: "Exo-Bold";
+	src: url(../fonts/Exo-Bold.ttf);
+}
+*{
+	max-width: 100vw;
+	margin: 0;
+	padding: 0;
+	max-height: 100vh;
+}
+body{
+	background: #ff7e00;
+	width: 100%;
+	font-family: "Exo-Bold",helvetica;
+}
+/*LOGO*/
+.img{
+	width: 80vw;
+}
+img{
+	width: 100%;
+}
+/*LOGIN*/
+div#contenido{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+div#formulario{
+	background: white;
+	width: 60vw;
+	margin-top: 10%;
+	padding: 10%;
+	border-radius: 20px;
+}
+.login{
+	width: 52vw;
+	border: 0;
+	border-bottom: 2px solid black;
+	color: #ff7e00;
+	font-size: 20px;
+}
+::placeholder{
+	color: black;
+}
+/*BOTONES*/
+div#botones{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+input{
+	width: 27vw;
+	margin-bottom: 15px;
+	padding: 10px;
+	align-items: center;
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+.boton{
+	background: #ff7e00;
+	margin: 0 auto;
+	border-radius:20px;
+
+}
+.boton:hover{
+	background: #DE7609;
+	box-shadow: 0px 0px 20px #666; 
+}
+/*TABLET*/
+@media only screen and (min-width: 500px) and (max-width: 1100px){
+	.img{
+		width: 30vw;
+	}
+	div#formulario{
+		width: 40vw;
+		margin: 0;
+		padding:25px;
+	}
+	input{
+		font-size: 2vw;
+		width: 15vw;
+	}
+	.login{
+		width: 38vw;
+	}
+}
+/*ORDENADOR*/
+@media only screen and (min-width: 1100px){
+	body{
+		background-color: none;
+		background-image: url(img/fondopc.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#contenido{
+		justify-content: space-evenly;
+		padding: 0;
+		margin: 0;
+	}
+	.img{
+		width: 25vw;
+		margin:0;
+	}
+	input{
+		font-size: 2vw;
+		width: 14vw;
+	}
+	div#formulario{
+		width: 35vw;
+		margin: 0;
+		padding: 5%;
+		background-color: #ffffffa6;
+	}
+	.login{
+		width: 35vw;
+		background-color: transparent;
+		color: black;
+	}
+	
+}

@@ -1,0 +1,297 @@
+﻿@font-face{
+	font-family: "Exo-Bold";
+	src: url(../fonts/Exo-Bold.ttf);
+}
+*{
+	max-width: 100vw;
+	margin: 0;
+	padding: 0;
+	max-height: 100vh;
+	font-family: "Exo-Bold",helvetica;
+}
+body{
+	color: #ff7e00;
+	background: white;
+}
+/*MENU*/
+#menu{
+	background: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+}
+#logo{
+	width: 25%;
+	padding-right: 10px;
+}
+nav ol{
+	list-style-type: none;
+	position: absolute;
+	left: 0px;
+	top: 46px;
+	background: #000000d9; 
+	display: none;
+	width: 100%;
+	font-size: 25px;
+}
+nav ol li{
+	padding-bottom: 10px;
+}
+nav ol li a{
+	text-decoration: none;
+	color: #ff7e00;
+}
+
+button{     
+	background: transparent;    
+	border: none;     
+	width: 30px;     
+	height: 30px;     
+	padding: 0;     
+	margin: 0; 
+}
+button img  {
+    margin-left: 15px;     
+    width: 30px;     
+    height: 30px; 
+}  
+button:focus + nav ol {
+    display: block;
+}
+/*ESPACIO ENTRE EL MENU Y EL MAIN*/
+#espacio{
+	height: 5.5vh;
+}
+/*MAIN*/
+#contenido{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	font-family: "Exo-Bold";
+}
+
+
+main {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-flow: row wrap;
+	background: #ff7e00;
+	height: 100%;
+}
+div.columna{
+	margin: 5px auto;
+	border-radius: 5px;
+	height: 25%;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 5px 5px 5px 0px black;
+}
+
+div.top{
+	background-color: black;
+	flex-grow: 2;
+	border-radius: 5px 5px 0px 0px;
+	font-size: 0.8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div.mid{
+	flex-grow: 4;
+	background-color: white;
+	display: flex;
+	align-items: flex-start;
+	padding: 25px;
+	flex-direction: column;
+
+}
+div.bot{
+	flex-grow: 1;
+	border-radius:0px 0px 5px 5px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+div.mid p{
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid lightgrey;
+	padding: 5px;
+	color: black;
+}
+
+div.bot a{
+	text-decoration: none;
+	color: black;
+	background-color: lightgrey;
+	padding: 13px;
+	border-radius: 10px;
+
+}
+.bot a:hover{
+	color: #ff7e00;
+	background: black;
+
+}
+
+/*FOOTER*/
+#flexfooter{
+	display: flex;
+	background: black;
+	font-size: 20px;
+	justify-content: space-between;
+	color: white;
+}
+#flexfooter a{
+	text-decoration: none;
+	color: white;
+
+}
+div#redessociales{
+	display: none;
+}
+/*TABLET*/
+@media only screen and (min-width: 500px) and (max-width: 1100px){
+	main{
+		height: 97.2vh;
+	}
+	#menu{
+		position: fixed;
+		width: 100%;
+	}
+	nav{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav ol{
+		max-width: 70%;
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		top: 0;
+	}
+	nav ol li{
+		padding-left: 3%;
+		width: 40%;
+		margin-top: 3%;
+	}
+	nav ol li a{
+		font-size: 3vw;
+	}
+	nav{
+		width: 100%;
+	}
+	.tablet{
+		display: none;
+	}
+	button{
+		display: none;
+	}
+	#logo{
+		width: 15%;
+		padding: 0;
+		margin: 0;
+		margin-left: 84%;
+		float: right;
+	}
+	main{
+		font-size: 2.5vw; 
+	}
+	div#redessociales{
+		display: none;
+	}
+	#espacio{
+		display: none;
+	}
+}
+/*ORDENADOR*/
+@media only screen and (min-width: 1100px){
+	#menu{
+		position: fixed;
+		width: 100%;
+	}
+	nav{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav ol{
+		max-width: 70%;
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		top: 0;
+	}
+	nav ol li{
+		padding-left: 3%;
+		margin-top: 2.5%;
+	}
+	nav ol li a{
+		font-size: 2vw;
+	}
+	nav{
+		width: 100%;
+	}
+	button{
+		display: none;
+	}
+	#logo{
+		width: 10%;
+		padding: 0;
+		margin: 0;
+		margin-left: 90%;
+		float: right;
+	}
+	h2{
+		font-size: 6vw;
+	}
+	.img img{
+		width: 15vw;
+	}
+	main{
+		height: 92vh;
+	}
+	#espacio{
+		height: 15vh;
+	}
+	div#redessociales{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	#redessociales p{
+		margin-right: 20px;
+	}
+	div#redessociales div{
+		margin-right: 20px;
+	}
+	
+	div.columna{
+		height: 50vh;
+	}
+	#flexfooter{
+		height: 80px;
+		display: flex;
+		align-items: center;
+	}
+	#cerrar{
+		display: none;
+	}
+	#espacio{
+		display: none;
+	}
+}
